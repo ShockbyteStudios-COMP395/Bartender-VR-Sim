@@ -3428,7 +3428,7 @@ MonoBehaviour:
     evaluationOrder: 1
     iterations: 3
     SORFactor: 1
-    enabled: 0
+    enabled: 1
   tetherConstraintParameters:
     evaluationOrder: 1
     iterations: 2
@@ -3443,7 +3443,7 @@ MonoBehaviour:
     evaluationOrder: 1
     iterations: 2
     SORFactor: 1
-    enabled: 0
+    enabled: 1
   densityConstraintParameters:
     evaluationOrder: 1
     iterations: 3
@@ -3568,7 +3568,7 @@ PrefabInstance:
     - target: {fileID: 2764921036435959007, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2764921036518390055, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
@@ -3593,7 +3593,7 @@ PrefabInstance:
     - target: {fileID: 2764921037832162238, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2764921037832162239, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
@@ -3653,7 +3653,7 @@ PrefabInstance:
     - target: {fileID: 2764921038279925366, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6642407473837415707, guid: 0b5f198c853b9794680bf089e64daf28,
         type: 3}
