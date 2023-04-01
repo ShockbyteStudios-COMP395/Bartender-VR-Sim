@@ -7,18 +7,9 @@ TagManager:
   - InvalidTeleportLocation
   - Ignore Collision Fade
   - AppleStem
-  - ScarecrowHand
-  - ScarecrowArm
   - TeleportTargetPoint
-  - WoodSaw
-  - Hammer
   - TeleportTargetArea
-  - Hacksaw
-  - HeadsetFaderCollider
-  - ScarecrowHat
-  - ScarecrowHead
-  - FireableArrow
-  - Flower
+  - Floor
   layers:
   - Default
   - TransparentFX
