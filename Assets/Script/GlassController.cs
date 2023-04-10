@@ -6,6 +6,7 @@ public class GlassController : MonoBehaviour
 {
 
     float[] contents = new float[8];
+
     // Start is called before the first frame update
     void Start()
     {

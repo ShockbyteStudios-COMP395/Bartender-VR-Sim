@@ -962,7 +962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1311678780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ PrefabInstance:
     - target: {fileID: 7774344186399642229, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8090891674275893548, guid: 1bb7642ebf8d0a34aa23fc586ea87e6a,
         type: 3}
@@ -1716,6 +1716,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bar Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 2194926700105592245, guid: abf6f4e1e8a77e342b27ad21bba4ac2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf6f4e1e8a77e342b27ad21bba4ac2c, type: 3}
