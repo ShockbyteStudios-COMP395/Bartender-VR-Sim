@@ -10,6 +10,8 @@ TagManager:
   - TeleportTargetPoint
   - TeleportTargetArea
   - Floor
+  - Shaker
+  - Stirrer
   layers:
   - Default
   - TransparentFX
