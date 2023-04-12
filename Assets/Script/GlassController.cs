@@ -6,17 +6,21 @@ public class GlassController : MonoBehaviour
 {
 
     float[] contents = new float[8];
+    bool shaked = false;
+    bool stirred = false;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
+        if (collision.gameObject.tag.Equals("Shaker"))
+        {
+            shaked = true;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.tag.Equals("Stirrer"))
+        {
+            stirred = true;
+        }
     }
 
     public void fillWithAlcohol(int id)
