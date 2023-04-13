@@ -12,6 +12,7 @@ TagManager:
   - Floor
   - Shaker
   - Stirrer
+  - Glass
   layers:
   - Default
   - TransparentFX

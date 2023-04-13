@@ -5,9 +5,10 @@ using UnityEngine;
 public class GlassController : MonoBehaviour
 {
 
-    float[] contents = new float[8];
-    bool shaked = false;
-    bool stirred = false;
+    
+    public float[] contents = new float[8];
+    public bool shaked = false;
+    public bool stirred = false;
 
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)

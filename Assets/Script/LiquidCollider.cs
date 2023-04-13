@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Obi;
+using System.Diagnostics;
 
 [RequireComponent(typeof(ObiSolver))]
 public class LiquidCollider : MonoBehaviour
@@ -33,8 +34,9 @@ public class LiquidCollider : MonoBehaviour
 			{
 				ObiColliderBase collider = ObiColliderWorld.GetInstance().colliderHandles[contact.bodyB].owner;
 
+				UnityEngine.Debug.Log("WATER COLLIDE" + collider.gameObject.tag);
 
-				if (collider.gameObject.tag == "Floor")
+				if (collider.gameObject.tag == "Glass")
 				{
 
 					glassController = collider.GetComponent<GlassController>();
