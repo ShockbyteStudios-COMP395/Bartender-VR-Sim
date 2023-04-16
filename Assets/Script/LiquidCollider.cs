@@ -34,11 +34,11 @@ public class LiquidCollider : MonoBehaviour
 			{
 				ObiColliderBase collider = ObiColliderWorld.GetInstance().colliderHandles[contact.bodyB].owner;
 
-				UnityEngine.Debug.Log("WATER COLLIDE" + collider.gameObject.tag);
+				UnityEngine.Debug.Log("WATER COLLIDE " + collider.gameObject.name);
 
 				if (collider.gameObject.tag == "Glass")
 				{
-
+					//UnityEngine.Debug.Log("WATER COLLIDE " + collider.gameObject.name);
 					glassController = collider.GetComponent<GlassController>();
 					//does something inside the gameobject colliding
 					glassController.fillWithAlcohol(id);

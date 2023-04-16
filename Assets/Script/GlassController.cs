@@ -6,7 +6,7 @@ public class GlassController : MonoBehaviour
 {
 
     
-    public float[] contents = new float[8];
+    public float[] contents = new float[4];
     public bool shaked = false;
     public bool stirred = false;
 
