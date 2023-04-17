@@ -13,6 +13,7 @@ TagManager:
   - Shaker
   - Stirrer
   - Glass
+  - Coaster
   layers:
   - Default
   - TransparentFX

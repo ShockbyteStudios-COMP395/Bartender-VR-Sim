@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Obi;
 using System.Diagnostics;
+using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(ObiSolver))]
 public class LiquidCollider : MonoBehaviour
@@ -10,8 +12,10 @@ public class LiquidCollider : MonoBehaviour
 	ObiSolver solver;
 	GlassController glassController;
 	public int id;
+    public TextMeshProUGUI activityText;
+    public AudioSource DrinkPoured;
 
-	void Awake()
+    void Awake()
 	{
 		solver = GetComponent<Obi.ObiSolver>();
 	}
@@ -42,9 +46,13 @@ public class LiquidCollider : MonoBehaviour
 					glassController = collider.GetComponent<GlassController>();
 					//does something inside the gameobject colliding
 					glassController.fillWithAlcohol(id);
-				}
+                    activityText.text = "Drink Poured";
+                    DrinkPoured.Play();
 
-			}}
+                }
+
+            }
+        }
 		}
 
 }
