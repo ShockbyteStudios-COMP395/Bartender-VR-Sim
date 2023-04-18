@@ -8,6 +8,17 @@ public class GameManager : MonoBehaviour
     private float[] manhattan = new float[4] {0, 1.02f, 0, 1.02f };
     private float[] negroni = new float[4] { 1.02f, 1.02f, 1.02f, 0 };
     private float[] martini = new float[4] { 1.02f, 1.02f, 0, 0 };
+    private float[][] drinks = new float[3][];
+
+
+    int[][] arrayOfArrays = new int[3][];
+
+    private void Start()
+    {
+        drinks[0] = new float[] { 0, 1.02f, 0, 1.02f };
+        drinks[1] = new float[] { 1.02f, 1.02f, 1.02f, 0 };
+        drinks[2] = new float[] { 1.02f, 1.02f, 0, 0 };
+    }
     // Update is called once per frame
     void Update()
     {
