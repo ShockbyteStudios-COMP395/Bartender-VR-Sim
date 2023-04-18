@@ -19,7 +19,6 @@ public class GlassController : MonoBehaviour
     // Start is called before the first frame update
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag.Equals("Shaker"))
         {
             shaked = true;
@@ -53,7 +52,6 @@ public class GlassController : MonoBehaviour
         if(contents[id] <= 1)
         {
             contents[id] += 0.02f;
-            Debug.Log(contents[id]);
         }
     }
 }

@@ -14,6 +14,7 @@ TagManager:
   - Stirrer
   - Glass
   - Coaster
+  - Bottle
   layers:
   - Default
   - TransparentFX
