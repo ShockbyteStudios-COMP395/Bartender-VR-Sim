@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DrinkVerification : MonoBehaviour
 {
     [SerializeField] private int id;
     private float[][] drinks = new float[3][];
+    private int score = 0;
+    public TextMeshProUGUI scoreText;
 
     private void Start()
     {
@@ -20,6 +23,8 @@ public class DrinkVerification : MonoBehaviour
             if (VerificateDrink(collision.gameObject.GetComponent<GlassController>().contents))
             {
                 Debug.Log("Drink is correct");
+                score++;
+                scoreText.text = "Score: " + score;
             }
         }
     }

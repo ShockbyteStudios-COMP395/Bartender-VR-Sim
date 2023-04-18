@@ -54,4 +54,9 @@ public class GlassController : MonoBehaviour
             contents[id] += 0.02f;
         }
     }
+
+    public void ResetContent()
+    {
+        contents = new float[4];
+    }
 }
