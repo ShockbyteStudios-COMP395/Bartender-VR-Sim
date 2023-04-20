@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/NewMenu.unity
+    guid: 2b7d5e9cee079d74cb9554326a835206
+  - enabled: 1
     path: Assets/Scenes/BarDemoMIxology.unity
     guid: 5a309a5fc00374446b125e2bf2cdbb7d
   m_configObjects:

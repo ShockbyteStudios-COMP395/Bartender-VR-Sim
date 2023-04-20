@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DrinkVerification : MonoBehaviour
 {
     [SerializeField] private int id;
     private float[][] drinks = new float[4][];
-    private int score = 0;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI winText;
     public Canvas winTextC;
     public Canvas GameUI;
+    public TextMeshProUGUI incorrectDrink;
+    private ScoreManager scoreManager;
     private void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
+
         winTextC.gameObject.SetActive(false); // set the winText object to inactive
         GameUI.gameObject.SetActive(true); // set the winText object to inactive
 
@@ -28,14 +32,18 @@ public class DrinkVerification : MonoBehaviour
             if (VerificateDrink(collision.gameObject.GetComponent<GlassController>().contents))
             {
                 Debug.Log("Drink is correct");
-                score++;
-                scoreText.text = "Drinks Served: " + score + "/3";
-                if (score >= 3)
+                scoreManager.UpdateScore(1);
+                scoreText.text = "Drinks Served: " + scoreManager.score + "/3";
+                incorrectDrink.text = "Drink Served";
+
+                if (scoreManager.score >= 3)
                 {
                     Time.timeScale = 0; // stop the game
                     winText.text = "You Win!"; // display win message
                     winTextC.gameObject.SetActive(true); // set the winText object to inactive
                     GameUI.gameObject.SetActive(false); // set the winText object to inactive
+                    SceneManager.LoadScene(0);
+
 
                 }
             }
@@ -48,6 +56,8 @@ public class DrinkVerification : MonoBehaviour
         {
             if (!Mathf.Approximately(contents[i], drinks[id][i]))
             {
+                incorrectDrink.text = "Wrong Drink";
+
                 Debug.Log("Drink is incorrect contents: " + contents[i] + " correct value: " + drinks[id][i]);
                 return false;
             }

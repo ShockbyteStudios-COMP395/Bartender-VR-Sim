@@ -39,7 +39,6 @@ public class GlassController : MonoBehaviour
 
         if (collision.gameObject.tag.Equals("Coaster"))
         {
-            activityText.text = "Drink Served";
             ServedSound.Play();
 
 
