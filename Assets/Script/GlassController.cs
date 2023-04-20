@@ -57,6 +57,6 @@ public class GlassController : MonoBehaviour
 
     public void ResetContent()
     {
-        contents = new float[4];
+        contents = new float[5];
     }
 }

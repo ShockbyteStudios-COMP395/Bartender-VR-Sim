@@ -28,7 +28,7 @@ public class ResetBottleController : MonoBehaviour
 
     public void ResetBottle()
     {
-        Debug.Log("Resetting bottle");
+        //Debug.Log("Resetting bottle");
         // Reset the position and rotation of the bottle to the initial values
         this.gameObject.transform.localPosition = initialPosition;
         this.gameObject.transform.rotation = currentRotation;

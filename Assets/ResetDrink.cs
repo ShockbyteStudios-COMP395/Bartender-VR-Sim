@@ -16,9 +16,9 @@ public class ResetDrink : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Glass"))
         {
-            Debug.Log("Reset Contents");
+            //Debug.Log("Reset Contents");
             collision.gameObject.GetComponent<GlassController>().ResetContent();
-            Debug.Log("Content Cleared");
+            //Debug.Log("Content Cleared");
 
         }
     }

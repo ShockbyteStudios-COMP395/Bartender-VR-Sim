@@ -6,15 +6,20 @@ using TMPro;
 public class DrinkVerification : MonoBehaviour
 {
     [SerializeField] private int id;
-    private float[][] drinks = new float[3][];
+    private float[][] drinks = new float[4][];
     private int score = 0;
     public TextMeshProUGUI scoreText;
-
+    public TextMeshProUGUI winText;
+    public Canvas winTextC;
+    public Canvas GameUI;
     private void Start()
     {
-        drinks[0] = new float[] { 0, 1.02f, 0, 1.02f };
-        drinks[1] = new float[] { 1.02f, 0, 0, 0 };
-        drinks[2] = new float[] { 1.02f, 1.02f, 0, 0 };
+        winTextC.gameObject.SetActive(false); // set the winText object to inactive
+        GameUI.gameObject.SetActive(true); // set the winText object to inactive
+
+        drinks[0] = new float[] { 1.02f, 1.02f, 0, 0,0 };
+        drinks[1] = new float[] { 1.02f, 0, 0, 0 ,1.02f};
+        drinks[2] = new float[] { 1.02f, 1.02f, 1.02f, 0,0 };
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -24,7 +29,15 @@ public class DrinkVerification : MonoBehaviour
             {
                 Debug.Log("Drink is correct");
                 score++;
-                scoreText.text = "Score: " + score;
+                scoreText.text = "Drinks Served: " + score + "/3";
+                if (score >= 3)
+                {
+                    Time.timeScale = 0; // stop the game
+                    winText.text = "You Win!"; // display win message
+                    winTextC.gameObject.SetActive(true); // set the winText object to inactive
+                    GameUI.gameObject.SetActive(false); // set the winText object to inactive
+
+                }
             }
         }
     }
